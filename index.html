@@ -1,34 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Suhitha Portfolio</title>
+<title>Suhitha | Cyber Security Portfolio</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
 <style>
+
+#particles-js{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
+background:#0d1117;
+}
+
 body{
 margin:0;
-font-family:Arial, sans-serif;
-background:#0d1117;
+font-family:Arial;
 color:white;
+}
+
+.light{
+background:white;
+color:black;
+}
+
+nav{
+position:sticky;
+top:0;
+background:#161b22;
+padding:15px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
 }
 
 header{
 text-align:center;
 padding:40px;
-background:#161b22;
 }
 
 .profile{
-width:130px;
-height:130px;
+width:140px;
+height:140px;
 border-radius:50%;
 border:3px solid #58a6ff;
-}
-
-.name{
-font-size:28px;
-margin-top:10px;
+box-shadow:0 0 20px #58a6ff;
+object-fit:cover;
 }
 
 .typing{
@@ -37,23 +62,10 @@ font-weight:bold;
 }
 
 section{
-padding:25px;
+padding:20px;
 margin:20px;
 background:#161b22;
-border-radius:12px;
-}
-
-h2{
-color:#58a6ff;
-}
-
-.skills span{
-display:inline-block;
-background:#0d1117;
-padding:8px 15px;
-margin:5px;
-border-radius:20px;
-border:1px solid #30363d;
+border-radius:10px;
 }
 
 .card{
@@ -61,176 +73,180 @@ background:#0d1117;
 padding:15px;
 margin:10px 0;
 border-radius:10px;
-border:1px solid #30363d;
+}
+
+.bar{
+background:#30363d;
+height:8px;
+border-radius:10px;
+}
+
+.fill{
+background:#58a6ff;
+height:8px;
+border-radius:10px;
 }
 
 .btn{
 display:inline-block;
 padding:10px 15px;
-margin:5px;
 background:#58a6ff;
 color:white;
-border-radius:8px;
 text-decoration:none;
+border-radius:8px;
+margin:5px;
 }
 
-input, textarea{
-width:100%;
-padding:10px;
-margin-top:10px;
-background:#0d1117;
-border:1px solid #30363d;
-color:white;
-border-radius:6px;
-}
-
-button{
-margin-top:10px;
-padding:10px 15px;
-background:#58a6ff;
-border:none;
-color:white;
-border-radius:6px;
+.toggle{
+position:fixed;
+right:20px;
+top:20px;
 cursor:pointer;
 }
 
-footer{
-text-align:center;
-padding:20px;
-color:gray;
-}
 </style>
-
 </head>
 
 <body>
 
+<div id="particles-js"></div>
+
+<div class="toggle" onclick="mode()">
+<i class="fas fa-moon"></i>
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
 <header>
+
 <img src="profile.jpg" class="profile">
 
-<div class="name">MACHHA SUHITHA</div>
+<h2>MACHHA SUHITHA</h2>
 <div class="typing" id="typing"></div>
 
-<br><br>
+<br>
 
-<a class="btn" href="https://github.com/suhithamachha" target="_blank">
-<i class="fab fa-github"></i> GitHub
-</a>
-
-<a class="btn" href="https://www.linkedin.com/in/your-linkedin" target="_blank">
-<i class="fab fa-linkedin"></i> LinkedIn
-</a>
+<a class="btn" href="https://github.com/suhithamachha">GitHub</a>
+<a class="btn" href="#">LinkedIn</a>
+<a class="btn" href="resume.pdf">Resume</a>
 
 </header>
 
-<section>
-<h2>About Me</h2>
-<p>B.Tech Cyber Security student currently learning C programming and building strong programming fundamentals.</p>
+<section id="about">
+<h2>About</h2>
+<p>First-year B.Tech Cyber Security student learning C, Python and Java. Passionate about ethical hacking and building projects.</p>
 </section>
 
 <section>
 <h2>Education</h2>
 <div class="card">
-<h3>B.Tech Cyber Security</h3>
-<p>Geetanjali College of Engineering</p>
-<p>2025 - Present</p>
+B.Tech Cyber Security<br>
+Geetanjali College of Engineering<br>
+B.Tech 1st Year
 </div>
 </section>
 
-<section>
+<section id="skills">
 <h2>Skills</h2>
-<div class="skills">
-<span>C Programming</span>
-<span>Cyber Security</span>
-<span>Problem Solving</span>
-<span>Data Structures</span>
-</div>
+
+<p>C Programming</p>
+<div class="bar"><div class="fill" style="width:70%"></div></div>
+
+<p>Cyber Security</p>
+<div class="bar"><div class="fill" style="width:50%"></div></div>
+
+<p>Python</p>
+<div class="bar"><div class="fill" style="width:40%"></div></div>
+
+<p>Java</p>
+<div class="bar"><div class="fill" style="width:35%"></div></div>
+
 </section>
 
-<section>
-<h2>Internships</h2>
+<section id="projects">
+<h2>Projects</h2>
+
 <div class="card">
-<p>Looking for Cyber Security Internship Opportunities</p>
+C Lab Programs  
+<br>
+<a class="btn" href="https://github.com/suhithamachha">View</a>
 </div>
+
+<div class="card">
+Linked List Implementation  
+<br>
+<a class="btn" href="https://github.com/suhithamachha">View</a>
+</div>
+
 </section>
 
 <section>
 <h2>Achievements</h2>
-<div class="card">
-<p>Started GitHub Portfolio</p>
-</div>
 
-<div class="card">
-<p>Learning C Programming</p>
-</div>
-</section>
-
-<section>
-<h2>Projects</h2>
-
-<div class="card">
-<h3>C Lab Programs</h3>
-<p>Basic C programs collection</p>
-</div>
-
-<div class="card">
-<h3>Linked List Implementation</h3>
-<p>Create, insert, delete operations</p>
-</div>
+<div class="card">Started GitHub Portfolio</div>
+<div class="card">Learning Python</div>
+<div class="card">Learning Java</div>
 
 </section>
 
-<section>
-<h2>Contact Me</h2>
+<section id="contact">
+<h2>Contact</h2>
 
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea placeholder="Your Message"></textarea>
-
-<button>Send Message</button>
+<div class="card">
+Email: yourmail@gmail.com  
+<br>
+GitHub: github.com/suhithamachha  
+<br>
+Location: Hyderabad
+</div>
 
 </section>
-
-<footer>
-© 2026 Suhitha
-</footer>
 
 <script>
-var text = [
+
+particlesJS("particles-js", {
+"particles":{
+"number":{"value":80},
+"size":{"value":3},
+"move":{"speed":1},
+"line_linked":{"enable":true}
+}
+});
+
+function mode(){
+document.body.classList.toggle("light")
+}
+
+var text=[
 "Cyber Security Student",
 "C Programmer",
-"Aspiring Security Engineer"
-];
+"Learning Python & Java",
+"Aspiring Ethical Hacker"
+]
 
-var i=0;
-var j=0;
-var current="";
-var isDeleting=false;
+var i=0,j=0,del=false;
 
 function type(){
-current=text[i];
+let current=text[i];
 
-if(isDeleting){ j--; }
-else{ j++; }
+if(del) j--; else j++;
 
 document.getElementById("typing").innerHTML=current.substring(0,j);
 
-if(!isDeleting && j==current.length){
-isDeleting=true;
-setTimeout(type,1000);
-return;
-}
-
-if(isDeleting && j==0){
-isDeleting=false;
-i++;
-if(i==text.length){ i=0; }
-}
+if(!del && j==current.length){del=true;setTimeout(type,1000);return;}
+if(del && j==0){del=false;i++;if(i==text.length)i=0;}
 
 setTimeout(type,100);
 }
 
 type();
+
 </script>
 
 </body>
